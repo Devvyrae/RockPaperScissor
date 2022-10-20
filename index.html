@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getComputerChoice (choice) {
+            
+            let answer= Math.floor(Math.random()*3)
+
+            switch (answer) { case 0: return("rock");
+             break;
+              case 1: return("paper"); 
+              break; 
+              case 2: return("scissors"); 
+              break; 
+              default: return("be more smart");}
+
+              return (answer);
+
+            }
+         
+
+         function singleRound (playerSelection, computerSelection) {
+            playerSelection=prompt("Play Rock, Paper, Scissors");
+            if (computerSelection== "rock" && playerSelection == "rock") {
+                return("It's a TIE!"); }
+            if (computerSelection== "scissors" && playerSelection == "scissors") {
+                return("It's a TIE!"); }
+            if (computerSelection== "paper" && playerSelection == "paper") {
+                return("It's a TIE!"); }
+            if (computerSelection == "rock" && playerSelection == "scissors") {
+                return("Ope! Not this time bucko!"); }
+            if (computerSelection == "scissors" && playerSelection == "paper") {
+                return("Ope! Not this time bucko!"); }
+            if (computerSelection == "paper" && playerSelection == "rock") {
+                return("Ope! Not this time bucko!"); }
+            if (computerSelection == "rock" && playerSelection == "paper") {
+                return("WOOT WOOT!! You won!");}
+            if (computerSelection == "paper" && playerSelection == "scissors") {
+                return("WOOT WOOT!! You won!");}
+            if (computerSelection == "scissors" && playerSelection == "rock") {
+                return("WOOT WOOT!! You won!");}
+
+            
+         }
+                                                                        
+         
+        
+        function game() {
+           console.log (singleRound(playerSelection, computerSelection));
+            for (let i = 0; i < 5; i++) {
+                if (i==="It's a TIE!") {
+                    return("0 points");
+                } else if (i==="Ope! Not this time bucko!") {
+                    return("Computer gets a point");
+                } else if (i==="WOOT WOOT!! You won!") {
+                    return("You get a point!"); 
+                } 
+    
+                    
+                }
+               
+        }
+         const playerSelection = ["rock", "paper", "scissors"]; 
+        const computerSelection = getComputerChoice(); 
+        game();
+      
+    
+                                                                           
+    </script>
+    
+</body>
+</html>
